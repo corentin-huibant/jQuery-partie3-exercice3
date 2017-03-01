@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <script src="jquery-2.2.4.js"></script>
+    <title>jQuery : exercice 3 - partie 3</title>
+  </head>
+  <body>
+    <input type="text" name="" value="">
+    <button type="button" name="button"></button>
+    <script>
+      var find = 55;
+      var trying = 0;
+      $('button').click (function() {
+        trying++
+        if ($('input').val() < find ) {
+          alert('plus !');
+        }else if ($('input').val() > find) {
+          alert('moins !');
+        }else {
+          alert('Correcte');
+          alert('vous avez cliqué ' + trying + ' fois');
+        }
+
+      })
+    </script>
+  </body>
+</html>
