@@ -9,19 +9,23 @@
     <input type="text" name="" value="">
     <button type="button" name="button"></button>
     <script>
-      var find = 55;
-      var trying = 0;
-      $('button').click (function() {
-        trying++
-        if ($('input').val() < find ) {
-          alert('plus !');
-        }else if ($('input').val() > find) {
-          alert('moins !');
-        }else {
-          alert('Correcte');
-          alert('vous avez cliqué ' + trying + ' fois');
+      var find = 55; // annonce d'une variable aléatoire entre 0 et 100
+      var trying = 0; // variable représentant le nombre d'essai qui s'incrémente à chaque clique
+      $('button').click (function() { //sur le clique du boutton
+        trying++ //la variable trying commence déjà à s'incrémenter
+        if ($.isNumeric($('input').val())) {//vérification si c'est bien un nombre, si c'est le cas
+              if ($('input').val() < find ) { //si la valeur de l'input est plus petite que la variable find
+                alert('plus !'); // alerter qu'il faut davantage.
+              }else if ($('input').val() > find) { //ou si la valeur de l'input est plus grande que la variable find
+                alert('moins !'); // alerter qu'il faut moins.
+              }else {
+                alert('Correcte'); //sinon, c'est correcte.
+                alert('vous avez cliqué ' + trying + ' fois'); //affiche le nombre d'essai
+                }
         }
-
+        else { // si ce n'est pas un nombre :
+          alert("vous vous foutez de ma tronche ?")
+        }
       })
     </script>
   </body>
