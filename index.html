@@ -9,7 +9,7 @@
     <input type="text" name="" value="">
     <button type="button" name="button"></button>
     <script>
-      var find = 55; // annonce d'une variable aléatoire entre 0 et 100
+      var find = Math.floor(Math.random() *101);
       var trying = 0; // variable représentant le nombre d'essai qui s'incrémente à chaque clique
       $('button').click (function() { //sur le clique du boutton
         trying++ //la variable trying commence déjà à s'incrémenter
